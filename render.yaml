@@ -2,7 +2,7 @@ services:
   - type: web
     name: n8n
     env: node
-    repo: https://github.com/n8n-io/n8n
+    repo: https://github.com/Tyson007-ai/n8n
     branch: master
     buildCommand: npm run build
     startCommand: n8n start
