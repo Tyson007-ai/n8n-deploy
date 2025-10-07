@@ -1,7 +1,11 @@
 services:
   - type: web
     name: n8n
-    env: docker
+    env: node
+    repo: https://github.com/n8n-io/n8n
+    branch: master
+    buildCommand: npm run build
+    startCommand: n8n start
     plan: free
     autoDeploy: false
     envVars:
@@ -10,7 +14,7 @@ services:
       - key: N8N_BASIC_AUTH_USER
         value: "admin"
       - key: N8N_BASIC_AUTH_PASSWORD
-        value: "taj123"
+        value: "admin123"
       - key: N8N_HOST
         value: "0.0.0.0"
       - key: N8N_PORT
