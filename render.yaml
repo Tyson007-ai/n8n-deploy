@@ -1,23 +1,9 @@
 services:
   - type: web
     name: n8n
-    env: node
+    env: docker
     repo: https://github.com/Tyson007-ai/n8n
-    branch: master
-    buildCommand: npm run build
-    startCommand: n8n start
+    branch: main
+    dockerfilePath: Dockerfile
     plan: free
     autoDeploy: false
-    envVars:
-      - key: N8N_BASIC_AUTH_ACTIVE
-        value: "true"
-      - key: N8N_BASIC_AUTH_USER
-        value: "admin"
-      - key: N8N_BASIC_AUTH_PASSWORD
-        value: "admin123"
-      - key: N8N_HOST
-        value: "0.0.0.0"
-      - key: N8N_PORT
-        value: "5678"
-      - key: WEBHOOK_URL
-        value: "https://n8n.onrender.com/"
